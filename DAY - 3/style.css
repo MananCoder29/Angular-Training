@@ -1,0 +1,77 @@
+.parent{
+    border: 2px solid red;
+}
+.box{
+    border: 1px solid green;
+    width:100px;
+    height:100px;
+    
+}
+#first{
+    background-color: antiquewhite;
+    display:inline-block;
+
+}
+#second{
+    background-color: aqua;
+    display:inline-block;
+
+}
+#third{
+ background-color: cadetblue;
+ float: left;
+ transform: translate(20px,20px) rotate(10deg);
+  
+}
+#fourth{
+ background-color: yellow;
+ float: left;
+ /*transform:translate(800px);*/
+}
+#fifth{
+    background-color: darkkhaki;
+    float:right;
+   /* margin-left: 35px;
+    transform:skew(25deg);*/
+   
+}
+#sixth{
+    background-color: lightgreen;
+    margin: 0 auto;
+    transform:scaleX(2);
+}
+#transition{
+    transition: font-size 5s;
+}
+div:hover{
+    font-size: 40px;
+    background-color: yellow;
+}
+.animation{
+    border:1px solid red;
+    animation-name: myanim;
+    animation-duration: 5s;
+
+}
+@keyframes myanim{
+    from{background-color: blue;
+        color:white;}
+    to{background-color: green;
+    color:white;}
+
+}
+/* header{
+    width:150px;
+    height:150px;
+    background-color: red;
+    text-align: center;
+    COLOR:white;
+    animation: anim 5s 2s infinite;
+}
+@keyframes anim{
+    0%{margin-left:50px;}
+    25%{margin-top:150px;}
+    50%{margin-right:300px;}
+    75%{margin-top:600px;}
+    100%{margin-left:900px;}
+} */

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    function validate(){
+        //alert("function called......");
+        var user = document.getElementById("user").value;
+        var pass = document.getElementById("pass").value;
+        if(user.length == 0){
+            //alert("Enter username");
+            document.getElementById("e1").innerHTML = "Username is required!!";
+            document.getElementById("e2").innerHTML = "";
+            return false;
+        }else if(pass.length == 0){
+            //alert("Enter password");
+            document.getElementById("e1").innerHTML = "";
+            document.getElementById("e2").innerHTML = "Password is required!!";
+            return false;
+        }else{
+            return true;
+        }
+    }
+    </script>
+</head>
+<body>
+    <div>
+        <h2>Form validation using javascript</h2>
+        <form action="basics.html" onsubmit=" return validate()">
+            <label>Username</label>
+            <input type="text" name="username" id="user"/>
+            <span id="e1" style="color:red;background-color:yellow;"></span><br>
+            <label>Password</label>
+            <input type="password" name="password" id="pass"/>
+            <span id="e2"  style="color:red;background-color:yellow;"></span><br>
+            <input type="submit">
+            <input type="reset">
+        </form><hr/>
+        <h2>Form validation using HTML5 features</h2>
+        <form action="basics.html">
+            <label>Username</label>
+            <input type="text" name="user1" id="user1" required/><br>
+            <label>Password</label>
+            <input type="password" name="pass1" id="pass1" required/><br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+        
+    </div>
+</body>
+</html>

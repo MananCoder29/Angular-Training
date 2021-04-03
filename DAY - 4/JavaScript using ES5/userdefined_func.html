@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function info(){
+            alert("welcome to user defined function")
+        }
+        function add(a,b){
+            var sum = a+b;
+            alert("sum of two number is: " + sum);
+        }
+        function greet(name){
+            return "welcome username " +name;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        info()
+        add(100,200);
+        add(300,400);
+        var name = greet("manan");
+        alert("welcome in main script " + name);
+    </script>
+</body>
+</html>

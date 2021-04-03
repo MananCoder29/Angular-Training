@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add(){
+            var n1 = document.getElementsByName("num")[0].value;
+            var n2= document.getElementsByName("num")[1].value;
+            var res = eval(n1) + eval(n2);
+            document.getElementsByName('res')[0].value = res;
+            document.getElementsByName("num")[0].value ="";
+            document.getElementsByName("num")[1].value ="";    
+        }
+        function sub(){
+            var n1 = document.getElementsByName("num")[0].value;
+            var n2= document.getElementsByName("num")[1].value;
+            var res = eval(n1) - eval(n2);
+            document.getElementsByName('res')[0].value = res;
+            document.getElementsByName("num")[0].value ="";
+            document.getElementsByName("num")[1].value ="";
+            
+        }
+    </script>
+</head>
+<body>
+    <h2>Calculator</h2>
+    Number1:<input type="text" name="num"/></body><br><br>
+    Number2:<input type="text" name="num"/></body><br><br>
+    Result:<input type="text" name="res"/><br><br>
+    <input type="button" value="add" onclick="add()"/>
+    <input type="button" value="sub" onclick="sub()"/>
+
+
+</body>
+</html>

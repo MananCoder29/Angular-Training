@@ -1,0 +1,49 @@
+/*div{color:blue;}
+p{color:red;}
+.fontClass{
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-variant-caps: all-small-caps;
+}
+.textClass{
+    text-align: left;
+    text-decoration: underline;
+    text-indent: 40px;
+    text-shadow: 3px 3px gray;
+}*/
+div{
+   border-style: solid;
+   border-width: 4px 2px;
+   border-color: greenyellow;
+}
+#d1{
+    border-top-color: hotpink;
+    border-left-color: indigo;
+    border-bottom-color: khaki;
+    border-right-color: lightcoral;
+    border-top-style: dashed;
+    border-right-style: dotted;
+    border-left-style: solid;
+    border-bottom-style: ridge;
+    margin-left:20px;
+    padding:10px;
+    color:darkmagenta;
+    margin-top: 10px;
+}
+/* border shortcut*/
+#d2{
+    border: 3px solid red;
+    padding-top:10px;
+}
+body{
+    background-image: url('https://images.unsplash.com/photo-1538370965046-79c0d6907d47?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHw%3D&w=1000&q=80');
+    background-repeat: no-repeat;
+    background-position-x: 200px;
+    background-position-y: 300px;
+    background-size: 500px;
+    background-attachment: fixed;
+    margin:0px
+}
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    do{
+     var choice = prompt("Enter your choice: 1 to add and 2 to sub");
+     switch(choice){
+          case "1":
+                   alert("you chose to add");
+                   var n1 = prompt("enter 1st number");
+                   var n2 = prompt("enter second number");
+                   var res = eval(n1) + eval(n2);
+                   alert("sum is "+res);
+                break;
+          case "2":alert("you chose to subtarct");
+                   n1 = prompt("enter 1st number");
+                   n2 = prompt("enter second number");
+                   res = eval(n1) - eval(n2);
+                   alert(" diff= " + res);
+                break;
+      }
+      var ter = confirm("Click ok if u want to continue");
+    }while(ter);
+    alert("task finished");
+    
+    
+    
+    </script>
+</body>
+</html>
