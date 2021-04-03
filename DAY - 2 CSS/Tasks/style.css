@@ -26,6 +26,9 @@ body,html{
     list-style-type: none;
     display: inline-block;
 }
+ol li{
+    list-style-type: none;
+}
 
 .container:after{
     
@@ -39,7 +42,7 @@ body,html{
     border: 1px solid black;
     background-color: yellow;
     color:green;
-    border-radius:5px;
+    border-radius:12px;
     padding:10px;
     width:31.25%;
     margin-left: 2px;

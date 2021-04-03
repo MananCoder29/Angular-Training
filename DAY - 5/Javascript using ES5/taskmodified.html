@@ -8,32 +8,36 @@
     <style>
         .classinfo{
             background-color: yellow;font-weight: bold;color: red;
+            border-collapse: collapse;padding: 10px;
         }
     </style>
     <script type="text/javascript">
     function addstyle(){
-        var main = document.getElementById("main");
+        var main = document.getElementsByTagName("table")[0];
         main.setAttribute('class','classinfo');
     }
       function onstore(){
         var val_id = document.getElementById("uid").value;
-        var id = document.createElement("p");
+        var row = document.createElement("tr");
+        var id = document.createElement("td");
         var textnodeid = document.createTextNode(val_id);
         id.appendChild(textnodeid);
-        document.getElementById("main").appendChild(id);
+        row.appendChild(id);
+        document.getElementsByTagName("table")[0].appendChild(row);
         document.getElementById("uid").value = "";
 
-        var name = document.createElement("p");
+        var name = document.createElement("td");
         var name_id = document.getElementById("uname").value;
         var textnodename = document.createTextNode(name_id.toString());
         name.appendChild(textnodename);
-        document.getElementById("main").appendChild(name);
+        row.appendChild(name);
+        document.getElementsByTagName("table")[0].appendChild(row);
         document.getElementById("uname").value = "";
 
-        var designation= document.createElement("p");
+        var designation= document.createElement("td");
         var desg_id = document.getElementById("udesignation").value;
 
-        var salary = document.createElement("p");
+        var salary = document.createElement("td");
         var sal_id = document.getElementById("usalary").value;
         var textnodesalary;
         if(desg_id == "Manager"){
@@ -45,19 +49,16 @@
         }
         var textnodesal = document.createTextNode(textnodesalary.toString());
         salary.appendChild(textnodesal);
-        document.getElementById("main").appendChild(salary);
+        row.appendChild(salary);
+        document.getElementsByTagName("table")[0].appendChild(row);
         document.getElementById("usalary").value = "";
 
 
         var textnodedesg = document.createTextNode(desg_id);
         designation.appendChild(textnodedesg);
         document.getElementById("udesignation").value ="";
-        document.getElementById("main").appendChild(designation);
-
-        var breakline = document.createElement("hr");
-        document.getElementById("main").appendChild(breakline);
-
-
+        row.appendChild(designation);
+        document.getElementsByTagName("table")[0].appendChild(row);
 
       }
     </script>
@@ -69,10 +70,16 @@
     salary: <input type="text" id="usalary"/><br/>
     designation: <input type="text" id="udesignation"/><br/>
     <input type="button" value="store" onclick="onstore()"/>
-    <input type="button" value="add css effects" onclick="addstyle()"/><br/>
-    <div id="main">
-
-    </div>
+    <input type="button" value="add css effects" onclick="addstyle()"/><br/><br/>
+       <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Designation</th>
+        </tr>
+       </table>
+    
 
     
 </body>
