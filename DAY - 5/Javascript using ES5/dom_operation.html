@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript"> 
+    function addData(){
+        var pnode = document.createElement("p");
+        var textnode = document.createTextNode("welcome to dom operation");
+        pnode.appendChild(textnode);
+      //  pnode.setAttribute("class","para");
+        
+
+        var div = document.getElementById('main');
+        div.appendChild(pnode);
+    }
+    var i =0;
+    function cleardata(){
+        document.getElementsByTagName("p")[i].innerHTML="";
+        i++;
+    }
+
+    </script>
+</head>
+<body>
+    <input type="button" value="add data" onclick="addData()"/>
+    <input type="button" value="clear data" onclick="cleardata()"/>
+    <div id="main">
+        
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    var mywin;
+    function openPage(){
+       // window.open("window_object.html")
+       mywin = window.open("mypage.html","","width=500px,height=400px,left=300px,top=200px");
+       mywin.document.write("This is my pop-up window");
+    }
+    function closepage(){
+        mywin.close();
+    }
+    </script>
+</head>
+<body>
+    <input type="submit" value="open web page" onclick="openPage()"/>
+    <input type="submit" value="close web page" onclick="closePage()"/>
+    
+</body>
+</html>

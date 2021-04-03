@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    var i=0;
+     function styleEffects(){
+      if(i%2 == 0){
+            document.getElementById("container").style.margin = "auto";
+            document.getElementById("imgId").src = "google.png";
+            //document.getElementsByTagName("div")[0].style.color = "red"
+
+            document.getElementById("d1").innerHTML ="Welcome to Google!";
+            document.getElementById("d1").style.color = "red";   
+      }else{
+            
+            document.getElementById("imgId").src = "pwc.png"
+            //document.getElementsByTagName("div")[0].style.color = "green";
+            document.getElementById("d1").innerHTML ="Welcome to PwC!";
+            document.getElementById("d1").style.color = "green";   
+      }
+      i++;
+    }
+    function info(){
+        setInterval("styleEffects()", 1000);
+    }
+    </script>
+</head>
+<body onload="info()">
+    <div id="container">
+    <img id="imgId" width="300px" />
+    <div id="d1">
+        Welcome to setInterval Effects.
+    </div>
+    </div>
+    
+</body>
+</html>

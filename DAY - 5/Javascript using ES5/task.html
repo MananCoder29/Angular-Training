@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .classinfo{
+            background-color: yellow;font-weight: bold;color: red;
+        }
+    </style>
+    <script type="text/javascript">
+    function addstyle(){
+        var main = document.getElementById("main");
+        main.setAttribute('class','classinfo');
+    }
+      function onstore(){
+        var val_id = document.getElementById("uid").value;
+        var id = document.createElement("p");
+        var textnodeid = document.createTextNode(val_id);
+        id.appendChild(textnodeid);
+        document.getElementById("main").appendChild(id);
+        document.getElementById("uid").value = "";
+
+        var name = document.createElement("p");
+        var name_id = document.getElementById("uname").value;
+        var textnodename = document.createTextNode(name_id.toString());
+        name.appendChild(textnodename);
+        document.getElementById("main").appendChild(name);
+        document.getElementById("uname").value = "";
+
+        var designation= document.createElement("p");
+        var desg_id = document.getElementById("udesignation").value;
+
+        var salary = document.createElement("p");
+        var sal_id = document.getElementById("usalary").value;
+        var textnodesalary;
+        if(desg_id == "Manager"){
+            textnodesalary = eval(sal_id) + 5000;
+        }else if(desg_id == "Programmer"){
+            textnodesalary = eval(sal_id) + 3000;
+        }else{
+            textnodesalary = eval(sal_id) +1500;
+        }
+        var textnodesal = document.createTextNode(textnodesalary.toString());
+        salary.appendChild(textnodesal);
+        document.getElementById("main").appendChild(salary);
+        document.getElementById("usalary").value = "";
+
+
+        var textnodedesg = document.createTextNode(desg_id);
+        designation.appendChild(textnodedesg);
+        document.getElementById("udesignation").value ="";
+        document.getElementById("main").appendChild(designation);
+
+        var breakline = document.createElement("hr");
+        document.getElementById("main").appendChild(breakline);
+
+
+       
+
+      }
+    </script>
+</head>
+<body>
+    <h2>Employee details</h2>
+    id: <input type="text" id="uid"/><br/>
+    name: <input type="text" id="uname"/><br/>
+    salary: <input type="text" id="usalary"/><br/>
+    designation: <input type="text" id="udesignation"/><br/>
+    <input type="button" value="store" onclick="onstore()"/><br/>
+    <input type="button" value="add css effects" onclick="addstyle()"/><br/>
+    <div id="main">
+
+    </div>
+
+    
+</body>
+</html>
