@@ -7,15 +7,20 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+      
+    <script defer src="node_modules/swup/dist/swup.min.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <main>
+    <main id="swup" class="transition-fade">
         <section class="glass">
          <div class="dashboard">
              <div class="user adjust">
-               <a href="index.html"><img src="images/img1.png" alt="img" width="80px" height="80px"></a>
-               <h3>Manan Shah</h3>
+               <a href="index.html"><img src="images/pic.jpg" alt="img" width="80px" height="80px"></a>
+               <h3 >Manan Shah</h3>
              </div>
              <div class="nav">
                 <div class="links adjustlink">
@@ -35,11 +40,12 @@
                        <img src="images/hobbies.png" alt="" width="50px" height="50px">
                        <h4><a href="hobby.html">Hobbies</a></h4>
                    </div>
-                </div>
-                <div class="contact adjustlink" >
+                   <div class="contact">
                     <img src="images/contact.png" alt="" width="50px" height="50px">
-                    <h4><a href="contact.html">Contact Me</a></h4>
+                    <h4><a href="/contact.html">Contact Me</a></h4>
                 </div>
+                </div>
+                
             </div>
          </div>
          <div class="frontpage">
@@ -47,58 +53,102 @@
                 <h3 class="edc-heading">Skill Details</h3>
              </div>
              <div class="card">
+                 <div class="detail">
                  <img src="images/python.png" alt="img" width="80px" height="80px">
+                 <h3>Python</h3>
+                 <p>Intermediate</p>
+                </div>
                  <div class="cardinfo">
-                     <h3>Python</h3>
-                     <p>Intermediate</p>
-                     <div class="progress" id="prog1"></div>
+                     
+                     <div class="progress">
+                        <div class="progress-bar" id="pro1" role="progressbar" aria-valuenow="80"
+                        aria-valuemin="0" aria-valuemax="100" style="background-color:blueviolet;">
+                          80%
+                        </div>
+                      </div>
                  </div>
-                 <h4 class="per">70%</h4>
+                 
              </div>
 
              <div class="card">
+                 <div class="detail">
                 <img src="images/android1.png" alt="img" width="80px" height="80px">
+                <h3>Android</h3>
+                <p>Intermediate</p>
+                 </div>
                 <div class="cardinfo">
-                    <h3>Android</h3>
-                    <p>Intermediate</p>
-                    <div class="progress" id="prog2">
+                    
+                    <div class="progress">
+                        <div class="progress-bar" id="pro2" role="progressbar" aria-valuenow="60"
+                        aria-valuemin="0" aria-valuemax="100" style="background-color:blueviolet;">
+                          60%
+                        </div>
+                      </div>
                       
                     </div>
                 </div>
-                <h4 class="per">50%</h4>
-            </div>
-
-            <div class="card">
-                <img src="images/html.png" alt="img" width="80px" height="80px">
-                <div class="cardinfo">
+                <div class="card">
+                    <div class="detail">
+                    <img src="images/html.png" alt="img" width="80px" height="80px">
                     <h3>HTML5</h3>
                     <p>Intermediate</p>
-                    <div class="progress" id="prog3"></div>
+                    </div>
+                    <div class="cardinfo">
+                        
+                        <div class="progress">
+                            <div class="progress-bar" id="pro3" role="progressbar" aria-valuenow="70"
+                            aria-valuemin="0" aria-valuemax="100" style="background-color:blueviolet;">
+                              70%
+                            </div>
+                          </div>
+                       
+                    </div>
+                    
                 </div>
-                <h4 class="per">80%</h4>
-            </div>
-            <div class="card">
-                <img src="images/css.png" alt="img" width="70px" height="70px">
-                <div class="cardinfo">
+                <div class="card">
+                    <div class="detail">
+                    <img src="images/css.png" alt="img" width="70px" height="70px">
                     <h3>CSS3</h3>
                     <p>Intermediate</p>
-                    <div class="progress" id="prog4"></div>
+                    </div>
+                    <div class="cardinfo">
+                       
+                        <div class="progress">
+                            <div class="progress-bar" id="pro4" role="progressbar" aria-valuenow="50"
+                            aria-valuemin="0" aria-valuemax="100" style="background-color:blueviolet;">
+                              50%
+                            </div>
+                          </div>
+                    </div>
+                   
                 </div>
-                <h4 class="per">50%</h4>
-            </div>
-            <div class="card">
-                <img src="images/JavaScript.png" alt="img" width="100px" height="70px">
-                <div class="cardinfo">
+                <div class="card">
+                    <div class="detail">
+                    <img src="images/JavaScript.png" alt="img" width="100px" height="70px">
                     <h3>JS</h3>
                     <p>Beginner</p>
-                    <div class="progress" id="prog5"></div>
+                    </div>
+                    <div class="cardinfo">
+                        
+                        <div class="progress">
+                            <div class="progress-bar" id="pro2" role="progressbar" aria-valuenow="60"
+                            aria-valuemin="0" aria-valuemax="100" style="background-color:blueviolet;">
+                              60%
+                            </div>
+                          </div>
+                        
+                    </div>
+                    
                 </div>
-                <h4 class="per">60%</h4>
+                
             </div>
+
+          
+           
          </div>
          <div class="arrow skill-arrow">
-            <a href="university.html"><img src="images/left1.png" alt="" width="50px" height="50px" class="left"></a>
-            <a href="project.html"><img src="images/RIGHT.png" alt="" width="50px" height="50px" class="right"></a>
+            <a href="university.html"><img src="images/rightt.png" alt="" width="50px" height="50px" class="left"></a>
+            <a href="project.html"><img src="images/rightt.png" alt="" width="50px" height="50px" class="right"></a>
         </div>
         </section>
     </main>

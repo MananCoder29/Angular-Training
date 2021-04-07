@@ -3,17 +3,42 @@
     margin:0;
     box-sizing: border-box;
 }
-h1,h3{
+h1,h3,span{
     color:#c731c7;
     font-weight: 600;
     font-size: 2rem;
     opacity: 0.8;
 
 }
-h4,a{
+h4, h4 a,p{
     color:#c731c7;
     font-weight: 600;
     opacity: 0.8;
+    font-size:1rem;
+}
+span:before{
+    content:'';
+    animation: animate infinite 8s;
+}
+@keyframes animate{
+    0%{
+        content: "Programmer!"
+    }
+    25%{
+        content: 'Music Lover!';
+    }
+    50%{
+        content: "ML Enthusiast!";
+    }
+    75%{
+        content: "Android Developer!";
+    }
+    100%{
+        content:"Front-end Developer!";
+    }
+   
+
+
 }
 main{
     min-height: 100vh;
@@ -47,6 +72,10 @@ main{
  background: linear-gradient(to right bottom, rgba(255,255,255,0.7),rgba(255,255,255,0.3));
  border-radius: 2rem;
 
+}
+.detail{
+    display: flex;
+    justify-content: space-between;
 }
 .user{
     margin-top: -15%;
@@ -95,11 +124,11 @@ main{
 .status input{
     background: linear-gradient(to right bottom, rgba(255,255,255,0.7),rgba(255,255,255,0.3));
     border:none;
-    width:50%;
     padding:0.5rem;
     border-radius: 2rem;
 
 }
+
 .frontpage{
     display: flex;
     flex-direction: column;
@@ -116,9 +145,30 @@ main{
     margin: 1rem 0rem;
     padding:1rem;
     box-shadow: 6px 6px 20px rgba(122,122,122,0.212);
-    justify-content: space-between;
+     justify-content: space-between;
+    box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
+    transition: all 0.3s ease;
+    
 }
-.progress{
+
+.card:hover{
+    transform: translateX(80px);
+}
+.link{
+  
+  transition: all .2s ease;
+}
+img{
+    position: relative;
+}
+.user img{
+    border-radius: 50%;
+}
+ img:hover{
+     
+    transform: scale(2rem);
+}
+.progresss{
     
     background-color: #1fd1f9;
     background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
@@ -129,9 +179,69 @@ main{
     position: relative;
     overflow: hidden;    
 }
-.prog1{
-    width:200px;
+ #pro1{
+    animation:progress1 infinite 10s 1s;
 }
+@keyframes progress1{
+    0%{
+       width:30%;
+    }
+    50%{
+        width:60%;
+    }
+    100%{
+        width:80%;
+    }
+    
+}
+
+#pro2{
+    animation:progress2 infinite 10s 1s;
+}
+@keyframes progress2{
+    0%{
+       width:15%;
+    }
+    50%{
+        width:30%;
+    }
+    100%{
+        width:60%;
+    }
+    
+}
+#pro3{
+    animation:progress3 infinite 10s 1s;
+}
+@keyframes progress3{
+    0%{
+       width:25%;
+    }
+    50%{
+        width:50%;
+    }
+    100%{
+        width:70%;
+    }
+    
+}
+#pro4{
+    animation:progress4 infinite 10s 1s;
+}
+@keyframes progress4{
+    0%{
+       width:15%;
+    }
+    50%{
+        width:30%;
+    }
+    100%{
+        width:50%;
+    }
+    
+}
+
+/*
 .prog2{
     width:300px;
 }
@@ -181,14 +291,14 @@ main{
  flex-direction: column;
  justify-content: space-between;
 } */
-.per{
+/*.per{
     font-weight:bold;
     background-color: #1fd1f9;
     background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color:transparent;
-}
+} */
 h3:hover {
     color:white;
     background-color: #1fd1f9;
@@ -249,14 +359,30 @@ h3 a input{
     margin: 55% 60%;
 }
  .left{
-    position:absolute;
+    position:fixed;
     bottom:0.5%;
-    right:40%;
+    right:50%;
+    transform: rotate(180deg);
     
 }
 .right{
-    position:absolute;
+    position:fixed;
     bottom: 0.5%;
     right:50%;
     left:70%;
+}
+
+.transition-fade{
+    opacity: 1;
+    transition: 500ms;
+    transform: translateX(0);
+    transform-origin: left;
+}
+html.is-animating.transition-fade{
+    opacity: 1;
+    transform:translateX(100%);
+}
+html.is-leaving.transition-fade{
+    opacity:0;
+    transform: translateX(0);
 }

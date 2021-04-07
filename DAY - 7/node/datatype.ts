@@ -1,0 +1,14 @@
+let num:number = 100;
+let fname:string = "manan";
+let result:boolean = true;
+let id:number;
+let fullname:string;
+let msg:any ="manan shah";
+msg = 200;
+msg = true;
+console.log("value of num is "+num);
+console.log("value of fname is "+fname);
+console.log("value of result is "+result);
+console.log("value of id is "+id);
+console.log("value of fullname is "+fullname);
+console.log("value of msg is "+msg);

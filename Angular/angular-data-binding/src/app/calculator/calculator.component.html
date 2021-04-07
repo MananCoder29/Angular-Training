@@ -1,0 +1,8 @@
+<div>
+    <h2>Calculator</h2>
+    1st Number: <input type="text" #num1Ref><br>
+    2nd Number: <input type="text" #num2Ref><br>
+    Result: {{result}}<br>
+    <input type="button" value="sum" (click)="add(num1Ref.value,num2Ref.value)">
+    <input type="button" value="sub" (click)="sub(num1Ref.value,num2Ref.value)">
+</div>

@@ -1,0 +1,22 @@
+<div>
+    <h2>Form</h2>
+    Pid: <input type="text" #pid><br>
+    Pname: <input type="text" #pname><br>
+    Price: <input type="text" #price><br>
+    <input type="button" value="add" (click)="add(pid.value,pname.value,price.value)">
+    <input type="button" value="remove" (click)="remove()"><br>
+    <table border=1>
+        <tr>
+            <th>Pid</th>
+            <th>Pname</th>
+            <th>Price</th>
+        </tr>
+        <tr *ngFor="let pro of product">
+            <td>{{pro.pid}}</td>
+            <td>{{pro.pname}}</td>
+            <td>{{pro.price}}</td>
+        </tr>
+
+    </table>
+
+</div>

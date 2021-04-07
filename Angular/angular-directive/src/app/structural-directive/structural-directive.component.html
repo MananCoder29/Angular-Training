@@ -1,0 +1,29 @@
+<div>
+    <h2>This is sturcture directive tag...</h2>
+    <p *ngIf = "true">Welcome to structure directive!</p>
+    <p *ngIf = "false">Welcome to structure directive!</p>
+    <div *ngIf ="flag">
+        This is a simple message
+    </div><br>
+    <input type="button" [value]="value" (click)="display()"/>
+    <hr>
+    <ul>
+        <li *ngFor="let std of stdName">{{std}}</li>
+    </ul>
+    <input type="button" value="show employee details" (click)="fun()"/><br>
+    <div *ngIf="flag1">
+        <table border=1>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Salary</th>
+            </tr>
+            <tr *ngFor="let emp of emplyees">
+                <td>{{emp.id}}</td>
+                <td>{{emp.name}}</td>
+                <td>{{emp.salary}}</td>
+            </tr>
+
+        </table>
+    </div>
+</div>
