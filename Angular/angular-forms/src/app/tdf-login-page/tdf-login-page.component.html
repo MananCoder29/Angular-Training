@@ -1,0 +1,64 @@
+<div>
+    <h3>Login page using TDF</h3>
+    <form #loginRef = "ngForm" (ngSubmit)="checkUser(loginRef.value)">
+        <label>FirstName:</label>
+        <input type="text" name="fname" ngModel required #firstRef="ngModel"/>
+       <!-- {{userRef.className}} -->
+       <div *ngIf="firstRef.errors && (firstRef.dirty|| firstRef.touched)">
+             <span style="color:red;background-color: yellow;">FirstName is required</span>
+       </div>
+        <br>
+        <label>LastName:</label>
+        <input type="text" name="lname" ngModel required #lastRef="ngModel"/>
+       <!-- {{userRef.className}} -->
+       <div *ngIf="lastRef.errors && (lastRef.dirty|| lastRef.touched)">
+             <span style="color:red;background-color: yellow;">LastName is required</span>
+       </div>
+       <br>
+
+        <!-- <label>Password:</label>
+        <input type="password" name="pass" ngModel required #passRef="ngModel"/>
+        <div *ngIf="passRef.errors && (passRef.dirty|| passRef.touched)">
+            <span style="color:red;background-color: yellow;">Password is required</span>
+      </div> -->
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male"  required ngModel>male
+        <input type="radio" name="gender" value="female"  required ngModel>female
+        <!-- <div *ngIf ="gender.oninvalid">Please select the gender</div> -->
+       <br>
+       <label>Hobbies</label>
+       <input type="checkbox" name="hobby1"  [(ngModel)]="cricket">Cricket
+       <input type="checkbox" name="hobby2"  [(ngModel)]="swimming" >Swimming
+       <input type="checkbox" name="hobby3"  [(ngModel)]="sleeping">Sleeping<br>
+       <label>City:</label>
+       <select name="city"  ngModel>
+           <option value="default">--Not selected--</option>
+           <option value="Bangalore">Bangalore</option>
+           <option value="Hyderabad">Hyderabad</option>
+           <option value="Gujarath">Gujarath</option>
+           <option value="Delhi">Delhi</option>
+       </select><br>
+       <label>Skillset</label>
+       <textarea name="skillset" cols="30" rows="10" required ngModel #skillRef = "ngModel">
+
+       </textarea>
+       <div *ngIf="skillRef.errors && (skillRef.dirty||skillRef.touched)">
+        <span style="color:red;background-color: yellow;">Textarea cant be empty</span>
+  </div><br>
+    
+
+        <input type="submit" [disabled]="loginRef.invalid"/>
+        <input type="reset"/><br>
+        <!-- {{loginRef.valid}} -->
+        {{msg}}
+    </form>
+   <!-- {{result}} -->
+   <div>
+       <p>FirstName: {{fname}}</p>
+       <p>LastName: {{lname}}</p>
+       <p>Gender: {{gender}}</p>
+       <p>Hobbies: {{hobbies}}</p>
+       <p>City: {{city}}</p>
+       <P>Skillset: {{skillset}}</P>
+   </div>
+</div>

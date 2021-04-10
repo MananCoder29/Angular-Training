@@ -1,0 +1,22 @@
+<div>
+    <input type="button" value="click here" (click)="fun1()"><br>
+    {{msg}}<br>
+    <input type="button" value="call fake service" (click)="callFake()"><br>
+    <input type="button" value="Load data in table" (click)="loadInTable()">
+    <div *ngIf="f1">
+        <table border="1">
+            <tr>
+                <th>UserId</th>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Completed</th>
+            </tr>
+            <tr *ngFor="let ff of fakeData">
+                <td>{{ff.userId}}</td>
+                <td>{{ff.id}}</td>
+                <td>{{ff.title}}</td>
+                <td>{{ff.completed}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

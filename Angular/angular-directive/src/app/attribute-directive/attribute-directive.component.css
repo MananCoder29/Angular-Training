@@ -1,0 +1,17 @@
+.fontFamily{
+    font-size: 45px;
+    font-weight: bold;
+    font-style:italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.backgroundFamily{
+    background-color: coral;
+}
+.firstBack{
+    background-color: cornflowerblue;
+    color:white;
+}
+.secondBack{
+    background-color: crimson;
+    color:white;
+}

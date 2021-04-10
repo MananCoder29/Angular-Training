@@ -1,0 +1,13 @@
+<div>
+    <h2>Login Page</h2>
+    <form #loginRef ="ngForm" (ngSubmit)="checkUser(loginRef.value)">
+      <label>UserName:</label>
+      <input type="text" name="user" ngModel/><br>
+      <label>Password</label>
+      <input type="password" name="pass" ngModel><br>
+      <input type="submit" value="Sign In">
+      <input type="reset">
+
+    </form>
+    {{errorMsg}}
+</div>

@@ -1,0 +1,11 @@
+p:nth-child(odd){
+    color:white;
+    background-color:green;
+    font-weight: bold;
+}
+p:nth-child(even){
+    color:red;
+    background-color:yellow;
+    font-weight: bold;
+}
+

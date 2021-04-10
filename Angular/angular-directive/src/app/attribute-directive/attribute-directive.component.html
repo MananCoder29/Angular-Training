@@ -1,1 +1,17 @@
-<p>attribute-directive works!</p>
+<div>
+    <h2>Attribute Directive Example</h2>
+    <h3>Style Attribute</h3>
+    <p style="color:red;">Apply css effect using inline css</p>
+    <p style="color:red;font-size:20px;">Apply css effect using inline css</p>
+    <p [ngStyle] ="{'color':'red'}">Apply css effect using angular ngstyle attribute</p>
+    <p [ngStyle] ="{'color':'red','font-size':'30px'}">Apply css effect using angular ngstyle attribute</p>
+    <p [ngStyle] ="styleData">Apply css effect using angular ngstyle with variable</p>
+    <p class="fontFamily">Welcome to CSS class selector</p>
+    <p [ngClass] = "'fontFamily'">Welcome to Class selector using ngclass</p>
+    <p class="fontFamily backgroundFamily">Welcome to CSS multiple class selector</p>
+    <p [ngClass] = "{fontFamily:true,backgroundFamily:true}">Welcome to  multiple Class selector using ngclass1</p>
+    <p [ngClass] = " 'fontFamily backgroundFamily' ">Welcome to  multiple Class selector using ngclass2</p>
+    <p [ngClass] = "{firstBack:f1,secondBack:f2}">Change the effect using button</p>
+    <input type="button" value="click" (click)="change()">
+
+</div>

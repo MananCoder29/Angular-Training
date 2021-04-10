@@ -1,0 +1,22 @@
+<div>
+    <h3>Login Page using MDF</h3>
+    <form [formGroup]='loginRef'>
+        <label>UserName:</label>
+        <input type="text" formControlName = 'user'/>
+        <div *ngIf ="loginRef.controls.user?.errors &&
+                     (loginRef.controls.user?.dirty || loginRef.controls.user?.touched)">
+                    <span style="background-color: yellow;color: red;">UserName is required</span>
+        </div>
+        <br>
+        <label>Password:</label>
+        <input type="password" formControlName='pass'/>
+        <div *ngIf ="loginRef.controls.pass?.errors &&
+        (loginRef.controls.pass?.dirty || loginRef.controls.pass?.touched)">
+       <span style="background-color: yellow;color: red;">Password is required</span>
+       </div>
+        <br>
+        <input type="button" value="log in" (click)="checkUser()"/>
+        {{msg}}
+
+    </form>
+</div>

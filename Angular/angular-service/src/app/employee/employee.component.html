@@ -1,0 +1,42 @@
+<div>
+    <h2 [ngStyle]="stylevalue">Employee component</h2>
+    
+
+    <hr>
+    <form #empRef = "ngForm" (ngSubmit)="storeRecord(empRef.value)">
+        <label>Id</label>
+        <input type="text" name="id" ngModel/><br>
+        <label>Name</label>
+        <input type="text" name="name" ngModel/><br>
+        <label>Salary</label>
+        <input type="text" name="salary" ngModel/><br>
+        <label>Gender</label>
+        <input type="radio" name="gender" value="male" ngModel/>Male
+        <input type="radio" name="gender" value="female" ngModel/>Female
+        <br>
+        <input type="submit" value="store record"  class="btn btn-success"/>
+        <!-- <input type="button" value="Load data in table format" (click)="loadInTableFormat()">--><br> 
+       Date details {{dd | date:'long'}}
+     <div *ngIf="flag">
+        <table border="1" class="table">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Salary</th>
+                <th>Gender</th>
+                <th>Employee object</th>
+                <th>Designation</th>
+            </tr>
+            <tr *ngFor="let emp of employeeData">
+                <td>{{emp.id}}</td>
+                <td>{{emp.name | uppercase | genderPipe : emp.gender}}</td>
+                <td>{{emp.salary | currency:"Rs."}}</td>
+                <td>{{emp.gender}}</td>
+                <td>{{emp | json}}</td>
+                <td>{{emp.salary | designPipe}}</td>
+            </tr>
+        </table>
+    </div>
+
+    </form>
+</div>
